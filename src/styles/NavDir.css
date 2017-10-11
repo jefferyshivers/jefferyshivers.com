@@ -1,0 +1,20 @@
+.NavDir {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.NavDir:hover {
+  background: rgb(40,40,40);
+}
+.NavDir:hover .material-icons {
+  color: lightblue;
+}
+.dir-title {
+  display: flex;
+  align-items: center;
+}
+.material-icons {
+  font-size: 18px;
+  padding-right: 8px;
+}
