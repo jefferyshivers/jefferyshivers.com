@@ -13,6 +13,29 @@ class Main extends Component {
       left: '50px',
       width: 'calc(100% - 50px)'
     }
+
+    const content = me[this.props.selectedFile].map((content, index) => {
+      let result
+      let img_style = {
+        width: 'calc(100% - 50px)',
+        maxWidth: '300px',
+        height: 'auto',
+        margin: '0 25px',
+        boxShadow: '0 0 10px rgba(0,0,0,.5)',
+        borderRadius: '2px'
+      }
+
+      if (content.type === 'text') {
+        result = content.body
+        result = {__html: result};
+        result = (<div key={index} className="inner-content" dangerouslySetInnerHTML={result} />);
+      } else if (content.type === 'image') {
+        result = (<img key={index} alt={content.alt} src={content.src} style={img_style}/>)
+      }
+
+      return result;
+    })
+
     return(
       <div className="Main" style={main_style}>
         <div className='title'>
@@ -22,7 +45,7 @@ class Main extends Component {
           </div>
         </div>
         <div className='content'>
-          {me[this.props.selectedFile]}
+          {content}
         </div>
       </div>
     )

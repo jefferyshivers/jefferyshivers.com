@@ -39,8 +39,14 @@
 .content {
   position: relative;
   float: left;
-  width: 100%;
+  width: calc(100% - 32px);
   padding: 16px;
+  font-family: var(--fonts-mono);
+  font-size: 12pt;
+}
+.inner-content {
+  position: relative;
+  margin: 25px;
 }
 
 .JS {
@@ -48,3 +54,12 @@
   color: lightblue;
   padding-right: 5px;
 }
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+/* p {
+  margin: 25px;
+  font-size: 13pt;
+} */

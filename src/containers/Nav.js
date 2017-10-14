@@ -42,15 +42,12 @@ class Nav extends Component {
           <NavDir title='about' onToggleDirectory={this.toggleDirectory} tabs={this.state.tabs}>
             <NavFile onSelectFile={this.props.onSelectFile} title='past_experience'/>
             <NavFile onSelectFile={this.props.onSelectFile} title='current_activities'/>
-            <NavFile onSelectFile={this.props.onSelectFile} title='other_interests'/>
           </NavDir>
           <NavDir title='projects' onToggleDirectory={this.toggleDirectory} tabs={this.state.tabs}>
             <NavFile onSelectFile={this.props.onSelectFile} title='one'/>
-            <NavFile onSelectFile={this.props.onSelectFile} title='two'/>
-            <NavFile onSelectFile={this.props.onSelectFile} title='three'/>
           </NavDir>
           <NavDir title='contact' onToggleDirectory={this.toggleDirectory} tabs={this.state.tabs}>
-            <NavFile onSelectFile={this.props.onSelectFile} title='professional'/>
+            <NavFile onSelectFile={this.props.onSelectFile} title='email'/>
             <NavFile onSelectFile={this.props.onSelectFile} title='social'/>
           </NavDir>
         </NavDir>

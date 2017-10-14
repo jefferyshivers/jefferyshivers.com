@@ -1,0 +1,1 @@
+This is my personal site made with React and Redux. It's styled to look similar to one of my favorite editors, VS Code.
