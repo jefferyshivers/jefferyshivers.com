@@ -240,6 +240,7 @@ body {
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
+          overflow-x: scroll;
 
           > li {
             list-style: none;

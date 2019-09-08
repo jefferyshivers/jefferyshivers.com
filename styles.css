@@ -149,7 +149,8 @@ body {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
-          align-items: center; }
+          align-items: center;
+          overflow-x: scroll; }
           body.tall nav > div > ul > li {
             list-style: none;
             height: 100%;
