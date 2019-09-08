@@ -126,44 +126,55 @@ body {
         body main section article > :not(:first-child) {
           padding: 1em 0 0; }
   body.tall {
-    height: 100vh; }
+    height: 100vh;
+    width: 100vw; }
     body.tall nav {
       position: fixed;
       top: 0;
-      width: 100%; }
+      padding: 0 1em;
+      width: 100vw; }
       body.tall nav > div {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        height: 100%; }
-        body.tall nav > div > div {
+        height: 100%;
+        width: 100vw !important; }
+        body.tall nav > div > div:first-of-type {
           height: 100%;
+          width: 10em;
           display: flex;
           justify-content: center;
           align-items: center;
           padding: 0 2em; }
-          body.tall nav > div > div > h2 {
+          body.tall nav > div > div:first-of-type > h2 {
             display: none; }
-        body.tall nav > div > ul {
+        body.tall nav > div > div:last-of-type {
+          position: relative;
           height: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          overflow-x: scroll; }
-          body.tall nav > div > ul > li {
-            list-style: none;
+          overflow-x: auto;
+          padding: 0 1em 0 0; }
+          body.tall nav > div > div:last-of-type > ul {
             height: 100%;
-            box-sizing: border-box;
+            width: auto;
             display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
-            justify-content: center; }
-            body.tall nav > div > ul > li > button {
-              height: calc(100% - 2em);
+            overflow: auto; }
+            body.tall nav > div > div:last-of-type > ul > li {
+              list-style: none;
+              height: 100%;
               box-sizing: border-box;
-              margin: 0.5em;
-              padding: 0 1.5em; }
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              body.tall nav > div > div:last-of-type > ul > li > button {
+                height: calc(100% - 2em);
+                box-sizing: border-box;
+                margin: 0.5em;
+                padding: 0 1.5em; }
     body.tall main {
       width: 100%; }
       body.tall main section > h2 {
@@ -186,22 +197,24 @@ body {
         justify-content: flex-start;
         align-items: center;
         flex-direction: column; }
-        body.wide nav > div > div {
+        body.wide nav > div > div:first-of-type {
           padding: 1em; }
-          body.wide nav > div > div h1 {
+          body.wide nav > div > div:first-of-type h1 {
             padding: 0.5em;
             text-align: center; }
-        body.wide nav > div > ul {
-          padding: 1em;
-          list-style-type: none;
-          overflow-y: scroll;
-          box-sizing: border-box;
-          width: 100%; }
-          body.wide nav > div > ul > li > button {
-            width: 100%;
-            cursor: pointer;
-            background: white;
-            padding: 1.5em 0.5em; }
+        body.wide nav > div > div:last-of-type {
+          width: 100%;
+          overflow-y: scroll; }
+          body.wide nav > div > div:last-of-type > ul {
+            padding: 1em;
+            list-style-type: none;
+            box-sizing: border-box;
+            width: 100%; }
+            body.wide nav > div > div:last-of-type > ul > li > button {
+              width: 100%;
+              cursor: pointer;
+              background: white;
+              padding: 1.5em 0.5em; }
     body.wide main {
       align-self: stretch; }
       body.wide main section {
@@ -217,13 +230,17 @@ body {
     padding-top: 60px; }
     body.mobile.tall nav {
       height: 60px; }
+      body.mobile.tall nav > div:first-of-type {
+        width: 14em; }
+      body.mobile.tall nav > div:last-of-type {
+        width: calc(100% - 14em); }
     body.mobile.tall main {
       min-height: calc(100vh - 60px); }
   body.mobile.wide nav {
     width: 10em; }
     body.mobile.wide nav > div {
       width: 10em; }
-      body.mobile.wide nav > div > ul > li {
+      body.mobile.wide nav > div > div > ul > li {
         margin: 0.5em 0; }
   body.mobile.wide main {
     width: calc(100% - 10em); }
@@ -231,13 +248,17 @@ body {
     padding-top: 90px; }
     body.desktop.tall nav {
       height: 90px; }
+      body.desktop.tall nav > div:first-of-type {
+        width: 14em; }
+      body.desktop.tall nav > div:last-of-type {
+        width: calc(100% - 14em); }
     body.desktop.tall main {
       min-height: calc(100vh - 90px); }
   body.desktop.wide nav {
     width: 20em; }
     body.desktop.wide nav > div {
       width: 20em; }
-      body.desktop.wide nav > div > ul > li {
+      body.desktop.wide nav > div > div > ul > li {
         margin: 1em 0; }
   body.desktop.wide main {
     width: calc(100% - 20em); }

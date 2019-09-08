@@ -211,21 +211,26 @@ body {
 
   &.tall {
     height: 100vh;
+    width: 100vw;
 
     nav {
       position: fixed;
       top: 0;
-      width: 100%;
+      padding: 0 1em;
+      width: 100vw;
 
       > div {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         height: 100%;
+        width: 100vw !important;
 
-        > div {
+        > div:first-of-type {
           height: 100%;
+          width: 10em;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -235,27 +240,35 @@ body {
             display: none;
           }
         }
-        > ul {
+        > div:last-of-type {
+          position: relative;
           height: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          overflow-x: scroll;
+          overflow-x: auto;
+          padding: 0 1em 0 0;
 
-          > li {
-            list-style: none;
+          > ul {
             height: 100%;
-            box-sizing: border-box;
+            width: auto;
             display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
-            justify-content: center;
-
-            > button {
-              height: calc(100% - 2em);
+            overflow: auto;
+  
+            > li {
+              list-style: none;
+              height: 100%;
               box-sizing: border-box;
-              margin: 0.5em;
-              padding: 0 1.5em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              > button {
+                height: calc(100% - 2em);
+                box-sizing: border-box;
+                margin: 0.5em;
+                padding: 0 1.5em;
+              }
             }
           }
         }
@@ -292,7 +305,7 @@ body {
         align-items: center;
         flex-direction: column;
 
-        > div {
+        > div:first-of-type {
           padding: 1em;
 
           h1 {
@@ -301,18 +314,22 @@ body {
           }
         }
 
-        > ul {
-          padding: 1em;
-          list-style-type: none;
-          overflow-y: scroll;
-          box-sizing: border-box;
+        > div:last-of-type {
           width: 100%;
+          overflow-y: scroll;
 
-          > li > button {
+          > ul {
+            padding: 1em;
+            list-style-type: none;
+            box-sizing: border-box;
             width: 100%;
-            cursor: pointer;
-            background: $foreground;
-            padding: 1.5em 0.5em;
+  
+            > li > button {
+              width: 100%;
+              cursor: pointer;
+              background: $foreground;
+              padding: 1.5em 0.5em;
+            }
           }
         }
       }
@@ -342,6 +359,14 @@ body {
       padding-top: 60px;
       nav {
         height: 60px;
+        > div {
+          &:first-of-type {
+            width: 14em;
+          }
+          &:last-of-type {
+            width: calc(100% - 14em);
+          }
+        }
       }
       main {
         min-height: calc(100vh - 60px);
@@ -354,7 +379,7 @@ body {
         > div {
           width: 10em;
 
-          > ul {
+          > div > ul {
             > li {
               margin: 0.5em 0;
             }
@@ -373,6 +398,14 @@ body {
       padding-top: 90px;
       nav {
         height: 90px;
+        > div {
+          &:first-of-type {
+            width: 14em;
+          }
+          &:last-of-type {
+            width: calc(100% - 14em);
+          }
+        }
       }
       main {
         min-height: calc(100vh - 90px);
@@ -385,7 +418,7 @@ body {
         > div {
           width: 20em;
 
-          > ul {
+          > div > ul {
             > li {
               margin: 1em 0;
             }
