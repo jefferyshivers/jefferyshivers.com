@@ -13,6 +13,9 @@ body,
   font-style: normal;
   font-family: 'EB Garamond', serif; }
 
+* {
+  -webkit-overflow-scrolling: touch; }
+
 html {
   font-size: 14px; }
   @media screen and (min-width: 500px) {

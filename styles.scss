@@ -14,6 +14,10 @@ body,
   font-family: 'EB Garamond', serif;
 }
 
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 $dark-accent: rgb(128, 189, 225);
 $accent: rgb(163, 221, 255);
 $pale-accent: rgba(163, 221, 255, 0.5);
