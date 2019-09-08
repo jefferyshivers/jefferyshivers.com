@@ -145,6 +145,7 @@ body {
       padding: 0 1em 1em;
       margin: 1em auto;
       box-sizing: border-box;
+      overflow-x: hidden;
 
       &:first-of-type {
         margin-top: 1em;
