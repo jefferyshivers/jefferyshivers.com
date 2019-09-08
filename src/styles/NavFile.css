@@ -1,8 +1,0 @@
-.NavFile {
-  position: relative;
-  float: left;
-  width: 100%;
-}
-.NavFile:hover {
-  background: rgb(40,40,40);
-}
