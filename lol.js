@@ -52,10 +52,13 @@ const section = function (id) {
 };
 
 navButtons.forEach(function (button) {
-  button.addEventListener(Event.CLICK, function () {
-    section(this.innerText).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+  const sectionIdTag = "section-id";
+  if (button.hasAttribute(sectionIdTag)) {
+    button.addEventListener(Event.CLICK, function () {
+      section(this.getAttribute(sectionIdTag)).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
-  });
+  }
 });

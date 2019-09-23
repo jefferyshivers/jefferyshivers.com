@@ -77,7 +77,18 @@ body {
   body main {
     position: relative;
     padding: 0 1em 1em;
-    overflow: scroll; }
+    overflow: scroll;
+    margin: 0;
+    box-sizing: content-box;
+    border: none; }
+    body main > iframe {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 1em);
+      margin: 0;
+      border: none;
+      margin-top: 1em;
+      padding: 0; }
     body main section {
       position: relative;
       background: white;
