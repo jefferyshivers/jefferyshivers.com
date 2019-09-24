@@ -24,7 +24,7 @@ $pale-accent: rgba(163, 221, 255, 0.5);
 $background: rgb(255, 255, 255);
 $foreground: rgb(255, 255, 255);
 $color-main: rgb(101, 101, 101);
-$shadow: rgba(40, 40, 40, 0.1);
+$shadow: rgba(40, 40, 40, 0.2);
 
 // begin fluid type
 
@@ -113,17 +113,23 @@ body {
     h2 {
       text-align: center;
     }
-    button {
+    button, a {
       font-size: 1em;
-      cursor: pointer;
+      cursor: pointer !important;
     }
     ul {
-      > li > button {
+      > li > button,
+      > li > a {
+        display: flex;
+        position: relative;
         color: $accent;
+        justify-content: center;
+        align-items: center;
 
         &, &:hover, &:visited, &:focus, &:focus-within {
           border-radius: 2px;
           border: 1px solid $accent;
+          cursor: pointer;
         }
 
         &:hover {
@@ -137,9 +143,21 @@ body {
     position: relative;
     padding: 0 1em 1em;
     overflow: scroll;
-    margin: 0;
-    box-sizing: content-box;
-    border: none;
+
+    > button#download-resume {
+      position: absolute;
+      top: 1em;
+      left: 2em;
+      z-index: 9;
+      background: $dark-accent;
+      padding: 0.5em 1em;
+      border-radius: 2px;
+      box-shadow: 0 0 8px $shadow;
+
+      > a {
+        color: white;
+      }
+    }
 
     > iframe {
       position: relative;
@@ -276,7 +294,7 @@ body {
               align-items: center;
               justify-content: center;
   
-              > button {
+              > button, > a {
                 height: calc(100% - 2em);
                 box-sizing: border-box;
                 margin: 0.5em;
@@ -337,7 +355,8 @@ body {
             box-sizing: border-box;
             width: 100%;
   
-            > li > button {
+            > li > button,
+            > li > a {
               width: 100%;
               cursor: pointer;
               background: $foreground;

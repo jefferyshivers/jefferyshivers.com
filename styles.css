@@ -64,23 +64,43 @@ body {
       cursor: default; }
     body nav h2 {
       text-align: center; }
-    body nav button {
+    body nav button, body nav a {
       font-size: 1em;
-      cursor: pointer; }
-    body nav ul > li > button {
-      color: #a3ddff; }
-      body nav ul > li > button, body nav ul > li > button:hover, body nav ul > li > button:visited, body nav ul > li > button:focus, body nav ul > li > button:focus-within {
+      cursor: pointer !important; }
+    body nav ul > li > button,
+    body nav ul > li > a {
+      display: flex;
+      position: relative;
+      color: #a3ddff;
+      justify-content: center;
+      align-items: center; }
+      body nav ul > li > button, body nav ul > li > button:hover, body nav ul > li > button:visited, body nav ul > li > button:focus, body nav ul > li > button:focus-within,
+      body nav ul > li > a,
+      body nav ul > li > a:hover,
+      body nav ul > li > a:visited,
+      body nav ul > li > a:focus,
+      body nav ul > li > a:focus-within {
         border-radius: 2px;
-        border: 1px solid #a3ddff; }
-      body nav ul > li > button:hover {
+        border: 1px solid #a3ddff;
+        cursor: pointer; }
+      body nav ul > li > button:hover,
+      body nav ul > li > a:hover {
         color: rgba(163, 221, 255, 0.5); }
   body main {
     position: relative;
     padding: 0 1em 1em;
-    overflow: scroll;
-    margin: 0;
-    box-sizing: content-box;
-    border: none; }
+    overflow: scroll; }
+    body main > button#download-resume {
+      position: absolute;
+      top: 1em;
+      left: 2em;
+      z-index: 9;
+      background: #80bde1;
+      padding: 0.5em 1em;
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(40, 40, 40, 0.2); }
+      body main > button#download-resume > a {
+        color: white; }
     body main > iframe {
       position: relative;
       width: 100%;
@@ -92,7 +112,7 @@ body {
     body main section {
       position: relative;
       background: white;
-      box-shadow: 0 0 12px rgba(40, 40, 40, 0.1);
+      box-shadow: 0 0 12px rgba(40, 40, 40, 0.2);
       padding: 0 1em 1em;
       margin: 1em auto;
       box-sizing: border-box;
@@ -181,7 +201,7 @@ body {
               display: flex;
               align-items: center;
               justify-content: center; }
-              body.tall nav > div > div:last-of-type > ul > li > button {
+              body.tall nav > div > div:last-of-type > ul > li > button, body.tall nav > div > div:last-of-type > ul > li > a {
                 height: calc(100% - 2em);
                 box-sizing: border-box;
                 margin: 0.5em;
@@ -221,7 +241,8 @@ body {
             list-style-type: none;
             box-sizing: border-box;
             width: 100%; }
-            body.wide nav > div > div:last-of-type > ul > li > button {
+            body.wide nav > div > div:last-of-type > ul > li > button,
+            body.wide nav > div > div:last-of-type > ul > li > a {
               width: 100%;
               cursor: pointer;
               background: white;
