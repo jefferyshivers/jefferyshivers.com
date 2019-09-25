@@ -1,20 +1,39 @@
 {
-  "devDependencies": {
-    "node-sass": "^4.12.0"
-  },
-  "name": "website",
+  "name": "jeffery-shivers-com",
   "version": "1.0.0",
+  "description": "personal website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "yarn compile:css",
-    "compile:css": "node-sass ./styles.scss ./styles.css"
+    "start": "node index.js",
+    "start-dev": "./node_modules/.bin/webpack-dev-server --port 3000 --content-base dist/",
+    "build": "./node_modules/.bin/webpack"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Jeffery Shivers",
+  "license": "MIT",
   "dependencies": {
+    "classnames": "^2.2.6",
+    "css-loader": "^3.2.0",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-pdf": "^4.1.0",
+    "react-router": "^5.1.0",
+    "react-router-dom": "^5.1.0",
+    "react-router-hash-link": "^1.2.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.0",
+    "webpack-dev-middleware": "^3.7.1",
+    "webpack-dev-server": "^3.8.1"
   }
 }

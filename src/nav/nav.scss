@@ -1,0 +1,172 @@
+@import "../index.scss";
+
+nav {
+  background: $foreground;
+  box-shadow: 0 0 20px rgba(146, 146, 146, 0.171);
+  z-index: 100;
+  display: flex;
+}
+
+nav:not(.landscape) {
+  position: fixed;
+  top: 0;
+  padding: 0 1em;
+  width: 100vw;
+
+  &.small {
+    height: 60px;
+  }
+  &:not(.small) {
+    height: 90px;
+  }
+  .title {
+    width: 14em;
+    height: 100%;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    > h2 {
+      display: none;
+    }
+  }
+  .controls {
+    position: relative;
+    height: 100%;
+    overflow-x: auto;
+    padding: 0 1em 0 0;
+
+    > ul {
+      height: 100%;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: auto;
+    }
+  }
+  .control {
+    list-style: none;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+      height: calc(100% - 2em);
+      box-sizing: border-box;
+      margin: 0.5em;
+      padding: 0 1.5em;
+    }
+  }
+  .inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100vw !important;
+  }
+}
+
+nav.landscape {
+  position: relative;
+  height: 100%;
+
+  .title {
+    padding: 1em;
+  }
+
+  &.small {
+    width: 10em;
+    .title, .controls {
+      width: 10em;
+    }
+    .control {
+      margin: 0.5em 0;
+    }
+  }
+  &:not(.small) {
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 20em;
+    .title, .controls {
+      width: 20em;
+    }
+    .control {
+      margin: 1em 0;
+    }
+  }
+  .inner {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .controls {
+    width: 100%;
+    overflow-y: scroll;
+
+    ul {
+      padding: 1em;
+      list-style-type: none;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+}
+
+h1 {
+  font-size: 1.4em;
+  cursor: default;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1em;
+}
+
+button, a {
+  font-size: 1em;
+  cursor: pointer !important;
+}
+
+.control {
+  display: flex;
+  position: relative;
+  color: $accent;
+  justify-content: center;
+  align-items: center;
+
+  > .control-anchor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &, &:hover, &:visited, &:focus, &:focus-within {
+      border-radius: 2px;
+      border: 1px solid $accent;
+      cursor: pointer;
+    }
+  
+    &:hover {
+      color: $pale-accent;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../index.scss";
+
+.download {
+  position: fixed;
+  top: calc(90px + 1.5em);
+  left: 50vw;
+  z-index: 9;
+  width: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  > a {
+    display: block;
+    color: white;
+    padding: 0.5em 1em;
+    background: $dark-accent;
+    border-radius: 2px;
+    box-shadow: 0 0 8px $shadow;
+    white-space: nowrap;
+  }
+}
+
+.small {
+  .download {
+    top: calc(60px + 1.5em);
+  }
+}
+
+.landscape {
+  .download {
+    position: sticky;
+    top: 1.5em;
+    left: 50%;
+  }
+}
+
+.pdf-document {
+  margin-top: 1em;
+}
+
+.pdf-page {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: stretch;
+  box-shadow: 0 0 12px $shadow;
+}
+
+.pdf-page:not(:first-of-type) {
+  margin-top: 1em;
+}
+
+.pdf-page > canvas {
+  width: 100% !important;
+  height: auto !important;
+}
