@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "start-dev": "./node_modules/.bin/webpack-dev-server --port 3000 --content-base dist/",
-    "prestart": "./node_modules/.bin/webpack"
+    "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --content-base dist/"
   },
   "author": "Jeffery Shivers",
   "license": "MIT",

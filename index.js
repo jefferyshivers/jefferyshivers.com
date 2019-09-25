@@ -15,4 +15,7 @@ app.get('*', (req, res) => {
   res.sendFile('dist/index.html', { root: __dirname });
 });
 
-app.listen(env.PORT || 80);
+const port = env.PORT || 80;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
