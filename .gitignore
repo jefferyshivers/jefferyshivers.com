@@ -2,7 +2,7 @@
 
 /node_modules
 /coverage
-/dist/bundle.js
+/dist/!index.html
 
 # misc
 .DS_Store

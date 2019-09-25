@@ -7,15 +7,19 @@ const app = express();
 const compiler = webpack(config);
 const env = process.env
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath
-}));
+const NODE_ENV = env.NODE_ENV;
+
+if (NODE_ENV === 'dev') {
+  app.use(require('webpack-dev-middleware')(compiler, {
+    publicPath: config.output.publicPath
+  }));
+}
 
 app.get('*', (req, res) => {
   res.sendFile('dist/index.html', { root: __dirname });
 });
 
-const port = env.PORT || 80;
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+const PORT = env.PORT || 80;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
