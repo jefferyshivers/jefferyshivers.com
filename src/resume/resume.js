@@ -5,10 +5,9 @@ import ga from 'react-ga';
 import ResumePDF from '../assets/JefferyShivers.pdf';
 import './resume.scss';
 
-ga.initialize('UA-46423540-1', { debug: true });
+ga.initialize('UA-46423540-1');
 
 const reportDownloadEvent = () => {
-  console.log('hi')
   ga.event({
     category: 'Downloads',
     action: 'Downloaded Resume'
