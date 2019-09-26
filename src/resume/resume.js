@@ -1,10 +1,21 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
+import ga from 'react-ga';
 
 import ResumePDF from '../assets/JefferyShivers.pdf';
 import './resume.scss';
 
-const DownloadButton = () => <button className="download">
+ga.initialize('UA-46423540-1', { debug: true });
+
+const reportDownloadEvent = () => {
+  console.log('hi')
+  ga.event({
+    category: 'Downloads',
+    action: 'Downloaded Resume'
+  })
+};
+
+const DownloadButton = () => <button className="download" onClick={reportDownloadEvent}>
   <a href={ResumePDF} download="JefferyShivers">download as pdf</a>
 </button>;
 
