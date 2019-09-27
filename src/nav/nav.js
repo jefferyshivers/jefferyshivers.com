@@ -5,7 +5,7 @@ import './nav.scss';
 
 const Title = () => <div className="title">
   <h1>Jeffery Shivers</h1>
-  <h2>Software Engineer, Musician, Bostonian</h2>
+  <h2>software engineer, musician, bostonian</h2>
 </div>;
 
 const createControlItem = size => ({ linkTo, label }) => <li className="control">

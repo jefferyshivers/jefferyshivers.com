@@ -18,8 +18,15 @@ body,
   -webkit-overflow-scrolling: touch;
 }
 
-$dark-accent: rgb(128, 189, 225);
-$accent: rgb(163, 221, 255);
+// $dark-accent: rgb(128, 189, 225);
+// $accent: rgb(163, 221, 255);
+// $pale-accent: rgba(163, 221, 255, 0.5);
+// $background: rgb(255, 255, 255);
+// $foreground: rgb(255, 255, 255);
+// $color-main: rgb(101, 101, 101);
+// $shadow: rgba(40, 40, 40, 0.2);
+$dark-accent: rgb(31, 97, 135);
+$accent: rgb(76, 160, 208);
 $pale-accent: rgba(163, 221, 255, 0.5);
 $background: rgb(255, 255, 255);
 $foreground: rgb(255, 255, 255);
