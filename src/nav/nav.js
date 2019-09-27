@@ -10,14 +10,12 @@ const Title = () => <div className="title">
 
 const createControlItem = size => ({ linkTo, label }) => <li className="control">
   <NavLink
-    // smooth
     scroll={el => {
       (size.isLandscape() ? el.parentNode : window).scroll({
         top: el.offsetTop,
         left: 0,
         behavior: "smooth"
       });
-      console.log('scrolled?')
     }}
     to={linkTo}
     className="control-anchor"

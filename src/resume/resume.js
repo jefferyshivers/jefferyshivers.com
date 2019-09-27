@@ -1,17 +1,16 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
-import ga from 'react-ga';
 
 import ResumePDF from '../assets/JefferyShivers.pdf';
 import './resume.scss';
 
-ga.initialize('UA-46423540-1');
+import { CustomEventInteraction, PageViewInteraction } from '../events';
 
 const reportDownloadEvent = () => {
-  ga.event({
+  new CustomEventInteraction({
     category: 'Downloads',
     action: 'Downloaded Resume'
-  })
+  }).publish();
 };
 
 const DownloadButton = () => <button className="download" onClick={reportDownloadEvent}>
@@ -46,6 +45,10 @@ export default class Resume extends React.Component {
   loadNumberOfPages({ numPages }) {
     this.setState({ numPages });
   };
+
+  componentDidMount() {
+    new PageViewInteraction({ path: window.location.pathname }).publish();
+  }
 
   render() {
     return <React.Fragment>
