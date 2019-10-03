@@ -1,37 +1,5 @@
-html,
-body,
-*,
-*:focus {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-  background: none;
-  text-decoration: none;
-  font-size: 1em;
-  font-style: normal;
-  font-family: 'EB Garamond', serif;
-}
-
-* {
-  -webkit-overflow-scrolling: touch;
-}
-
-// $dark-accent: rgb(128, 189, 225);
-// $accent: rgb(163, 221, 255);
-// $pale-accent: rgba(163, 221, 255, 0.5);
-// $background: rgb(255, 255, 255);
-// $foreground: rgb(255, 255, 255);
-// $color-main: rgb(101, 101, 101);
-// $shadow: rgba(40, 40, 40, 0.2);
-$dark-accent: rgba(11, 83, 148, 0.95);
-$accent: rgba(59, 152, 235, 0.9);
-$pale-accent: rgba(11, 83, 148, 0.6);
-$background: rgb(255, 255, 255);
-$foreground: rgb(255, 255, 255);
-$color-main: rgb(101, 101, 101);
-$shadow: rgba(40, 40, 40, 0.2);
+@import "./reset.scss";
+@import "./variables.scss";
 
 // begin fluid type
 
@@ -72,42 +40,6 @@ html {
 
 // end fluid-type
 
-h1,
-h2,
-h3 {
-  text-align: left;
-}
-
-h2,
-a,
-a:visited,
-a:hover {
-  color: $accent;
-}
-
-h1,
-h3 {
-  font-family: "Oxygen", sans-serif;
-  color: $dark-accent;
-}
-
-h2 {
-  font-family: "Oxygen", sans-serif;
-}
-
-em, a {
-  font-size: inherit !important;
-  font-family: inherit !important;
-}
-
-em {
-  color: $dark-accent;
-}
-
-body {
-  max-height: 100vh;
-}
-
 .app {
   width: 100vw;
   height: auto;
@@ -131,6 +63,6 @@ body {
   &.landscape {
     min-height: 100vh;
     flex-wrap: nowrap;
+    padding-left: 12em;
   }
-
 }

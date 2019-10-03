@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import "../variables.scss";
 
 main {
   position: relative;
@@ -34,7 +34,11 @@ section {
   h2 {
     padding: 1em 0;
     border-bottom: 2px solid $accent;
-    background: $foreground;
+  }
+
+  h3 {
+    background: $pale-accent;
+    padding: 0.5em 0.25em;
   }
 
   p {
@@ -64,13 +68,7 @@ section {
 
 main.landscape {
   align-self: stretch;
-
-  &.small {
-    width: calc(100% - 10em);
-  }
-  &:not(.small) {
-    width: calc(100% - 20em);
-  }
+  width: calc(100vw - 12em);
 
   section {
     min-height: calc(100vh - 1em);
@@ -80,15 +78,16 @@ main.landscape {
     }
 
     > h2 {
-      position: sticky !important;
-      top: -1px;
-      z-index: 60;
+      // position: sticky !important;
+      // top: -1px;
+      // z-index: 60;
     }
   }
 }
 
 main:not(.landscape) {
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 
   &.small {
     min-height: calc(100vh - 60px);
@@ -113,20 +112,5 @@ article {
 
   > :not(:first-child) {
     padding: 1em 0 0;
-  }
-}
-
-> button#download-resume {
-  position: absolute;
-  top: 1em;
-  left: 2em;
-  z-index: 9;
-  background: $dark-accent;
-  padding: 0.5em 1em;
-  border-radius: 2px;
-  box-shadow: 0 0 8px $shadow;
-
-  > a {
-    color: white;
   }
 }

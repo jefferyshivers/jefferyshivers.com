@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+html,
+body {
+  font-family: $serif;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+*, *:focus {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  background: none;
+  font-size: 1em;
+  font-style: normal;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $accent;
+  text-align: left;
+  font-family: $sans-serif;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+h2 {
+  font-size: 1em;
+}
+h3 {
+  font-size: 1em;
+}
+
+em, a {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  max-height: 100vh;
+}

@@ -4,12 +4,13 @@ import Section from './section';
 
 export default () => <Section title="about">
   <p>
-    Hi, I'm Jeffery Shivers. I am currently a Software Engineer at <a href="https://pos.toasttab.com" target="_blank">Toast</a> in Boston.
+    Hello, I'm Jeffery Shivers. I am currently a Software Engineer at <a href="https://pos.toasttab.com" target="_blank">Toast</a> in Boston.
   </p>
 
-  {/* <picture-frame>
-        <img src="./assets/headshot.jpg" alt="headshot">
-      </picture-frame> */}
+  {/* <picture-frame> */}
+  {/* TODO */}
+  {/* <img src="./assets/headshot.jpg" alt="headshot"> */}
+  {/* </picture-frame> */}
 
   <p>
     I usually work in Java (Dropwizard, Protocol Buffers / gRPC, Pulsar) and NodeJS (React, Express).
