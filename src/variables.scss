@@ -7,3 +7,9 @@ $color-main: rgb(101, 101, 101);
 $shadow: rgba(40, 40, 40, 0.2);
 $serif: "EB Garamond", serif;
 $sans-serif:  "Oxygen", sans-serif;
+
+.dark {
+  $accent: purple;
+  $dark-accent: green;
+  $pale-accent: orange;
+}

@@ -5,9 +5,11 @@ import './nav.scss';
 
 import TitlePlate from '../titlePlate';
 
-const Title = () => <div className="titleContainer">
-  <TitlePlate />
-</div>;
+const Title = ({ handleClickTitlePlate }) => (
+  <div className="titleContainer">
+    <TitlePlate onClick={handleClickTitlePlate} />
+  </div>
+);
 
 const createControlItem = size => ({ linkTo, label }) => (
   <li className="controlItem">
@@ -33,7 +35,7 @@ const ControlItems = ({ children }) => <div className="controlItemsContainer">
   </ul>
 </div>;
 
-export default ({ size, open, handleClose }) => {
+export default ({ size, open, handleClose, toggleTheme }) => {
   const ControlItem = createControlItem(size);
 
   return <nav className={cx({
@@ -41,7 +43,7 @@ export default ({ size, open, handleClose }) => {
   })} onClick={handleClose}>
     <div className="outer">
       <div className="inner">
-        <Title />
+        <Title handleClickTitlePlate={toggleTheme} />
         <ControlItems>
           <ControlItem linkTo="/#about" label="about" />
           <ControlItem linkTo="/#projects" label="projects" />

@@ -2,8 +2,8 @@ import React from 'react';
 
 import './titlePlate.scss';
 
-export default () => (
-  <div className="titlePlate">
+export default ({ onClick }) => (
+  <div onClick={onClick} className="titlePlate">
     Jeffery Shivers
   </div>
 );

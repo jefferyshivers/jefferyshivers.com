@@ -18,10 +18,10 @@ const ToggleNavButton = ({ navOpen, handleClick }) => {
   );
 };
 
-export default ({ onToggleNavOpen, navOpen }) => (
+export default ({ onToggleNavOpen, navOpen, handleClickTitlePlate }) => (
   <React.Fragment>
     <div className="titleBar">
-      <TitlePlate />
+      <TitlePlate onClick={handleClickTitlePlate} />
     </div>
     <ToggleNavButton handleClick={onToggleNavOpen} navOpen={navOpen} />
   </React.Fragment>

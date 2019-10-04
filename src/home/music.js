@@ -21,11 +21,18 @@ export default () => <Section title="music">
 
   <article>
     <h3>
+      <a href="https://soundcloud.com/jefferyshivers/brainwash-chopped-and-screwed"><em>eismatrix[0] - excerpt from installation in Iceland, January 2017.</em></a>
+    </h3>
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300254038&color=%2300aabb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+  </article>
+
+  <article>
+    <h3>
       <a href="https://soundcloud.com/jefferyshivers/brainwash-chopped-and-screwed"><em>Nils Frahm's
           "Brainwashed", chopped and screwed.</em></a>
     </h3>
     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/324694731&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/324694731&color=%2300aabb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
   </article>
 
   <article>
@@ -42,6 +49,6 @@ export default () => <Section title="music">
       <a href="https://soundcloud.com/jefferyshivers"><em>minimum enclosure.</em></a>
     </h3>
     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/433256871&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/433256871&color=%2300aabb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
   </article>
 </Section>;
