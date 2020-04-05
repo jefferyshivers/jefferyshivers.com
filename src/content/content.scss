@@ -8,10 +8,10 @@ main {
 
 section {
   position: relative;
-  background: $foreground;
-  box-shadow: 0 0 12px $shadow;
+  background: $background;
+  box-shadow: 0 0 8px $shadow;
   padding: 0 1em 1em;
-  margin: 1em auto;
+  margin: 3em auto;
   box-sizing: border-box;
   overflow-x: hidden;
 
@@ -33,12 +33,14 @@ section {
 
   h2 {
     padding: 1em 0;
-    border-bottom: 2px solid $accent;
+    color: $pale-accent;
+    border-bottom: 2px solid $pale-accent;
   }
 
   h3 {
-    background: $pale-accent;
-    padding: 0.5em 0.25em;
+    background: $dark-accent;
+    color: $foreground;
+    padding: 0.5em 0.5em;
   }
 
   p {
@@ -51,7 +53,7 @@ section {
     position: relative;
     width: calc(100% - 2em);
     max-width: 500px;
-    box-shadow: 0 0 10px rgba(46, 46, 46, 0.534);
+    box-shadow: 0 0 4px $shadow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,15 +74,9 @@ main.landscape {
 
   section {
     min-height: calc(100vh - 1em);
-    margin: 1em auto;
+    margin: 2em auto;
     &:last-of-type {
       margin-bottom: 0;
-    }
-
-    > h2 {
-      // position: sticky !important;
-      // top: -1px;
-      // z-index: 60;
     }
   }
 }
@@ -103,7 +99,7 @@ main:not(.landscape) {
 
 article {
   padding: 1em 0 1em 1em;
-  border-left: 2px solid $accent;
+  border-left: 2px solid $dark-accent;
   margin-top: 1em;
 
   &:not(:last-of-type) {

@@ -12,6 +12,7 @@ import Home from './home';
 import Resume from './resume';
 import Content from './content';
 import './index.scss';
+import { Particles } from './particles';
 
 const history = createBrowserHistory();
 
@@ -75,6 +76,7 @@ class App extends Component {
         "landscape": this.state.size.isLandscape(),
         "dark": this.state.theme === Theme.DARK
       })}>
+        <Particles quantity={200} fixed={!this.state.size.isLandscape()} />
         {this.state.size.isLandscape() ? null : titleBar}
         <Nav
           size={this.state.size}

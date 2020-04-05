@@ -7,7 +7,7 @@ nav {
   height: 100vh;
   width: 12em;
   z-index: 19;
-  background: $pale-accent;
+  background: $translucent-overlay-color;
   transition: left 250ms, width 0;
   font-family: $sans-serif;
 }
@@ -19,7 +19,7 @@ nav {
   transition: 250ms;
   background: $background;
   overflow: hidden;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .inner {
@@ -45,6 +45,9 @@ nav.open {
     width: 12em;
     max-width: 12em;
   }
+  .controlItem > a {
+    border-radius: 0 24px 24px 0;
+  }
 }
 
 .controlItem {
@@ -52,15 +55,20 @@ nav.open {
   width: 100%;
 
   > a {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    padding: 1em;
+    height: 48px;
+    padding: 0 1em;
     cursor: pointer;
     transition: color 250ms, background 250ms;
     color: $accent;
 
     &:hover {
       background: $pale-accent;
+      color: $dark-accent;
     }
     &:active {
       background: $accent;
