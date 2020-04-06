@@ -8,7 +8,7 @@ main {
 
 section {
   position: relative;
-  background: $background;
+  background: $foreground;
   box-shadow: 0 0 8px $shadow;
   padding: 0 1em 1em;
   margin: 3em auto;
@@ -39,7 +39,7 @@ section {
 
   h3 {
     background: $dark-accent;
-    color: $foreground;
+    color: $accent;
     padding: 0.5em 0.5em;
   }
 

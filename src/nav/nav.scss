@@ -19,7 +19,6 @@ nav {
   transition: 250ms;
   background: $background;
   overflow: hidden;
-  // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .inner {
@@ -41,9 +40,11 @@ nav.open {
 .landscape nav {
   left: 0;
   width: 12em;
+  background: none;
   .outer {
     width: 12em;
     max-width: 12em;
+    background: none;
   }
   .controlItem > a {
     border-radius: 0 24px 24px 0;

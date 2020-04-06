@@ -20,18 +20,18 @@
 @for $i from 1 through 200 {
 	@keyframes particle-animation-#{$i} {
 		100% {
-			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+			transform: translate3d((random(120) * 1vw), (random(120) * 1vh), (random(100) * 1px));
 		}
 	}
 	
 	.particle:nth-child(#{$i}){
-		animation: particle-animation-#{$i} 60s infinite;
+		animation: particle-animation-#{$i} 120s infinite;
 		$size: random(5) + 2 + px;
 		opacity: random(100)/100;
 		height: $size;
 		width: $size;
 		animation-delay: -$i * .2s;
 		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
-		background: rgba(200, 200, 200 + random(55), 0.5);
+		background: rgba(200, 200, 200 + random(55), 0.1);
 	}
 }

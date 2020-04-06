@@ -14,7 +14,7 @@ export default () => <Section title="about">
 
   <p>
     I usually work in Java (with tools like RxJava, Dropwizard, Pulsar) and NodeJS (Typescript, React, Express).
-    I'm also a huge proponent of gRPC and protocol buffers, and maintain a tool for packaging protobufs called <a href="" target="_blank">protop</a>.
+    I'm also a huge proponent of gRPC and protocol buffers, and maintain a tool for packaging protobufs called <a href="https://protop.io" target="_blank">protop</a>.
   </p>
   <p>
     Sometimes I work on open source projects like GNU LilyPond (Google Summer of Code 2016) and the Open Music Initiative (IDEO, Summer 2017 fellowship). 
